@@ -12,7 +12,7 @@ for dep_path in "${PATCHES[@]}"; do
         git reset --hard
         for patch in "${patches[@]}"; do
             echo Applying $patch
-            git apply "$ROOT/$patch"
+            git apply --ignore-whitespace "$ROOT/$patch"
         done
         cd $ROOT
     fi
